@@ -1,0 +1,330 @@
+@import './mixin-title.scss';
+
+$main-color: #ff7766;
+$second-color:#eee;
+$black:#000;
+
+@font-face {
+    font-family: "cairo-font";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body{
+    font-family: "cairo-font",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.top-menu{
+    .navbar{
+        font-weight:bold;
+        padding:0 50px;
+        background-color: transparent;
+        transition: all .4s ease;
+
+        .navbar-brand{
+            margin:0;
+            width:20%;
+
+            img{
+                width:25%;
+            }
+
+            b{
+                font-size:20px;
+            }
+        }
+
+        .navbar-nav{
+            li{
+                a{
+                    color:$black;
+                    font-size:16px;
+                    transition: all .4s ease;
+
+                    &:hover{
+                        background-color: $second-color;
+                        color:$main-color;
+                        border-bottom:1px solid $main-color;
+                    }
+
+                    &.active{
+                        background-color: $second-color;
+                        color:$main-color;
+                        border-bottom:1px solid $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.noTransparent{
+    background-color: white !important;
+    border-bottom:2px solid #eee;
+}
+
+.header{
+    height:100vh;
+
+    .row{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        img{
+            position: absolute;
+            top:0;
+            right:0;
+            height: 100%;
+            width:100%;
+            opacity: 0.5;
+        }
+        
+        .header-container{
+            width:100%;
+            max-width: 1170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 2;
+
+            h1{
+                text-align: center;
+                margin-bottom: 50px;
+                font-size:45px;
+            }
+
+            h5{
+                text-align: center;
+                line-height: 45px;
+                font-size:28px;
+                color: rgb(88, 88, 88);
+            }
+        }
+    }
+}
+
+.services{
+    padding:70px 20px 50px;
+
+    .services-container{
+        h2{
+            @include section-title;
+        }
+
+        .card{
+            width:80%;
+            justify-content: center;
+            height:200px;
+            
+            .icon{
+                color:$main-color !important;
+                font-size:60px;
+                margin-bottom:10px;
+            }
+
+            .card-title{
+                text-align: center;
+            }
+
+            .card-text{
+                text-align: center;
+                line-height:30px;
+            }
+        }
+    }
+}
+
+.tours{
+    padding:70px 20px;
+
+    .tours-container{
+        h2{
+            @include section-title;
+        }
+
+        .card{
+            width:80%;
+            transition: all .5s ease;
+            
+            &:hover{
+                box-shadow: 0 2px 12px #b9b9b9;
+            }
+
+            .clearfix{
+                margin-bottom:20px;
+
+                h5{
+                    font-size:18px;
+                }
+
+                span{
+                    color:#4934fb;
+                }
+            }
+
+            a.btn{
+                padding:8px 30px;
+            }
+        }
+    }
+}
+
+.contact{
+    padding:30px 30px 50px;
+    background-color: #fbfbfb;
+
+    .contact-container{
+        h2{
+            @include section-title;
+        }
+
+        .info{
+
+            div{
+                margin-bottom:30px;
+ 
+                .icon-2{
+                    color:$main-color;
+                    font-size:18px;
+                    margin-left:5px;
+                }
+                
+                b{
+                    font-size:20px;
+                }
+
+                h3{
+                    font-size:19px;
+                    margin:10px 0 0;
+                    font-weight:normal;
+                }
+            }
+        }
+
+        .social-media{
+            ul{
+                list-style: none;
+                display:flex;
+                margin:0;
+                padding:0;
+                margin-top:20px;
+
+                li{
+                    &:not(:last-child){
+                        margin-left:30px;
+                    }   
+
+                    a{
+                        font-size:40px;
+                        color:$main-color;
+                        transition: all .4s ease;
+
+                        &:hover{
+                            color:#d4412d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    padding:30px;
+    background-color:#fbfbfb;
+    border-top:1px solid #d6d6d6;
+
+    p{
+        text-align: center;
+        color:$black;
+        font-size:16px;
+        margin-bottom:0;
+    }
+}
+
+@media(max-width:991px){
+    .top-menu{
+        .navbar{
+            padding:10px 20px !important;
+
+            .navbar-brand{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                img{
+                    width:40%;
+                }
+
+                b{
+                    display: none;
+                }
+            }
+
+            .navbar-nav{
+                a{
+                    border-bottom: none !important;
+                    padding-right:5px;
+                }
+            }
+
+            a.btn{
+                margin-right:0 !important;
+                margin-top:20px;
+                margin-bottom:5px;
+            }
+        }
+
+        .tours{
+            .tours-container{
+                .card{
+                    justify-content: center !important;
+                }
+            }
+        }
+    }
+
+    .header{
+        h1{
+            font-size:40px !important;
+        }
+
+        h5{
+            font-size:24px !important;
+            margin:0 30px;
+        }
+    }
+
+    .services{
+        padding-bottom: 0 !important;
+        .services-container{
+            .card{
+                height:250px !important;
+            }
+        }
+    }
+
+}
+
+@media(max-width:767px){
+    .header{
+        h1{
+            margin-bottom: 20px !important;
+        }
+    }
+}
+
+@media(max-width:575px){
+    .services{
+    
+        .services-container{
+            .card{
+               margin-bottom:30px;
+            }
+        }
+    }
+}
