@@ -1,8 +1,6 @@
 @import './mixin-title.scss';
-
-$main-color: #ff7766;
-$second-color:#eee;
-$black:#000;
+@import './variables.scss';
+@import './register.scss';
 
 @font-face {
     font-family: "cairo-font";
@@ -278,14 +276,6 @@ footer{
                 margin-bottom:5px;
             }
         }
-
-        .tours{
-            .tours-container{
-                .card{
-                    justify-content: center !important;
-                }
-            }
-        }
     }
 
     .header{
@@ -304,6 +294,7 @@ footer{
         .services-container{
             .card{
                 height:250px !important;
+                width:100% !important;
             }
         }
     }
@@ -323,7 +314,7 @@ footer{
     
         .services-container{
             .card{
-               margin-bottom:30px;
+                margin-bottom:30px;
             }
         }
     }
