@@ -3,32 +3,32 @@
 .top-menu{
     nav.navbar-border{
         border-bottom:2px solid #eee;
+    }
+}
 
-        .breadcrumb{
-            background-color: transparent;
+.breadcrumb{
+    background-color: transparent;
 
-            li{
-                
-                a{
-                    text-decoration: none;
-                    color:$black !important;
-                    font-size: 18px;
-                }
+    li{
+        
+        a{
+            text-decoration: none;
+            color:$black !important;
+            font-size: 18px;
+        }
 
-                &:first-child:after{
-                    content:">";
-                    color:$black;
-                    padding:0 10px;
-                    font-size:20px;
-                }
+        &:first-child:after{
+            content:">";
+            color:$black;
+            padding:0 10px;
+            font-size:20px;
+        }
 
-                &.active{
-                    background-color: $second-color;
-                    color:$main-color;
-                    border-bottom:1px solid $main-color;
-                    padding:5px 10px;
-                }
-            }
+        &.active{
+            background-color: $second-color;
+            color:$main-color;
+            border-bottom:1px solid $main-color;
+            padding:5px 10px;
         }
     }
 }
@@ -53,24 +53,33 @@
                 text-decoration: none;
                 font-size: 18px;
             }
-
-            .form-control, .custom-select{
-
-                &:focus{
-                    border-color:$main-color !important;
-                    box-shadow: 0 0 3px 1px $main-color !important;
-                }
-            }
-
-            .error{
-                color:red;
-            }
         }
+    }
+
+    .modal{
+        a{
+            text-decoration: none;
+        }
+    }
+
+}
+
+form{
+
+    .form-control, .custom-select{
+
+        &:focus{
+            border-color:$main-color !important;
+            box-shadow: 0 0 3px 1px $main-color !important;
+        }
+    }
+
+    .error{
+        color:red;
     }
 }
 
 @media(max-width:991px){
-    	
     .account{
         .acount-container{
 

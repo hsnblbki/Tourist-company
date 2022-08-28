@@ -22,5 +22,5 @@ var year=date.getFullYear();
 document.getElementById("date").innerHTML = year;
 
 $(document).ready(function(){
-    $(".register-form").validate();
+    $("form").validate();
 });

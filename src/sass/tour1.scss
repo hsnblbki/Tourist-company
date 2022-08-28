@@ -1,0 +1,149 @@
+@import './variables';
+
+$font-tour1:rgb(0, 119, 255);
+$background-tour1:rgb(197, 228, 233);
+
+.tour-header{
+    height:350px;
+    position: relative;
+
+    img{
+        position: absolute;
+        right:0;
+        left:0;
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+
+    h2{
+        position: absolute;
+        top:50%;
+        right:50%;
+        transform: translateX(50%);
+        z-index:1;
+        color:white;
+        font-size: 35px;
+    }
+}
+
+.tour-description{
+    padding:50px 20px;
+    background-color: $background-tour1;
+
+    h5{
+        color: $font-tour1;
+        margin-bottom:10px;
+        font-size:28px;
+    }
+
+    p{
+        font-size:22px;
+        line-height:30px;
+    }
+
+    ul{
+        list-style: none;
+
+        li{
+            font-size:20px;
+            line-height:25px;
+            margin-bottom:20px;
+            position: relative;
+            padding-right:20px;
+
+            &::after{
+                position:absolute;
+                content:"";
+                top:25%;
+                right:0;
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                background-color: $font-tour1;
+            }
+        }
+    }
+
+    .carousel{
+        padding:20px 20px 120px;
+        background-color:white;
+        height:700px;
+        width:100%;
+        border-radius:5px;
+
+        .carousel-inner{
+            height:100%;
+        }
+
+        .carousel-indicators{
+            bottom:20px;
+            img{
+                width: 75px;
+                height:75px;
+                border:2px solid #dddddb;
+
+                &.active{
+                    border-color:#f8ad47;
+                }
+
+                &:not(:last-child){
+                    margin-left:5px;
+                }
+            }
+        }
+
+        .carousel-control-prev, .carousel-control-next{
+            opacity:1;
+            width:10% !important;
+            color:black;
+            font-size:40px !important;
+        }
+    }
+}
+
+@media(max-width:991px){
+    .tour-header{
+        h2{
+            font-size:25px;
+        }
+    }
+
+    .tour-description{
+        .carousel{
+            padding-bottom:20px !important;
+            height:450px;
+
+            .carousel-indicators{
+                display:none;
+            }
+        }
+    }
+}
+
+@media(max-width:767px){
+    .top-menu{
+        .navbar-tour{
+            img{
+                width:60% !important;
+            }
+        }
+    }
+
+    .tour-header{
+        h2{
+            text-align: center;
+        }
+    }
+
+    .tour-description{
+        .carousel{
+            padding:10px;
+            height:300px;
+
+            .carousel-control-prev, .carousel-control-next{
+                display: none;
+            }
+        }
+    }
+}

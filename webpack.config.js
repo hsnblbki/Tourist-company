@@ -90,6 +90,11 @@ module.exports = {
             filename: "register.html"
         }),
 
+        new HtmlWebpackPlugin({
+            template:"./src/tour1.html",
+            filename: "tour1.html"
+        }),
+
         new MiniCssExtractPlugin({
             filename: "css/Style.css",
         })
